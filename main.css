@@ -112,8 +112,8 @@ header .logo .nabi {
 }
 
 header .logo img {
-    width: 40px;    /* Chỉnh logo nhỏ vừa với chữ */
-    height: 40px;
+    width: 200px;    /* Chỉnh logo nhỏ vừa với chữ */
+    height: 65px;
     object-fit: cover;
 }
 
@@ -152,7 +152,7 @@ header label.fa-bars {
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background-image: url('images/home-1.jpg');
+    background-image: url('images/home.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;    
