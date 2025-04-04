@@ -1,0 +1,262 @@
+body {
+    background-color: #fffcda; /* Màu nền */
+    font-family: Arial, sans-serif; /* Font chữ */
+}
+.container h1 {
+    text-align: center; /* Căn giữa chữ */
+    margin-top: -110px; /* Điều chỉnh vị trí lên trên */
+    padding: 5px 100px; /* Giữ khoảng cách bên trong nhưng thu nhỏ khung */
+    padding-top: 0;
+    padding-bottom: 0;
+    background-color: #f4cf9d; /* Màu nền */
+    color:#c33436;
+    border-radius: 10px; /* Bo góc */
+    display: inline-block; /* Đảm bảo khung ôm nội dung */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Hiệu ứng đổ bóng */
+    font-family: 'Playfair Display', serif; /* Font chữ */
+    font-weight: 900; /* Black */
+    font-size: 46px; /* Tăng kích thước chữ */
+    line-height: 1.2; /* Giữ độ cao dòng */
+    width: auto; /* Giữ khung nhỏ gọn */
+}
+
+.rating {
+    text-align: left; /* Căn giữa đánh giá */
+}
+
+.price {
+    font-size: 24px; /* Kích thước chữ giá */
+    text-align: left; /* Căn giữa */
+    margin: 10px 0; /* Khoảng cách trên và dưới */
+}
+
+.description {
+    padding: 10px; /* Khoảng cách bên trong */
+    margin: 10px 0; /* Khoảng cách trên và dưới */
+}
+
+.container h2 {
+   
+    margin-top: 0; /* Tạo khoảng cách với nội dung trên */
+    margin-bottom: 10px; /* Tạo khoảng cách với nội dung dưới */
+    padding: 8px 12px; /* Tạo khoảng cách bên trong khung */
+    background-color: #fff3e0; /* Màu nền của khung */
+    font-size: 10px;
+    font-family: 'Playfair Display', serif; 
+    border-radius: 10px; /* Bo góc cho khung */
+    display: inline-block; /* Giữ kích thước khung vừa với nội dung */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Hiệu ứng đổ bóng */
+}
+
+
+
+
+.button-container {
+    display: flex;
+    justify-content: center; /* Căn giữa các nút */
+    gap: 10px; /* Khoảng cách giữa các nút */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    flex-wrap: nowrap; /* Ngăn chặn xuống dòng */
+    width: 100%;
+    max-width: 500px;
+    margin: 20px auto;
+}
+
+
+.button, .chat-btn, .buy-now-btn {
+    flex: 1;
+    text-align: center;
+    padding: 12px 20px;
+    border-radius: 30px;
+    font-weight: bold;
+    white-space: nowrap; /* Giữ chữ trên một hàng, không xuống dòng */
+    min-width: 120px;
+}
+
+.buy-now-btn {
+    background-color: #e74c3c; /* Màu đỏ cho nút mua ngay */
+    color: white;
+}
+
+
+
+.back-btn {
+    display: inline-block;
+    background-color: #f4cf9d; 
+    color: #003ec7; /* Màu chữ */
+    padding: 10px 5px; /* Khoảng cách bên trong giống nút */
+    border-radius: 30px; /* Bo góc */
+    font-weight: bold;
+    text-decoration: none; /* Xóa gạch chân mặc định */
+    text-align: center;
+    font-family: 'Playfair Display', serif; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Đổ bóng nhẹ */
+    transition: background 0.3s ease;
+}
+
+.back-btn:hover {
+    background-color: #5a494791; /* Đổi màu khi rê chuột */
+}
+
+
+
+.chat-btn {
+    display: inline-block;
+    background-color: #f6c65f; /* Màu nền giống nút mua ngay */
+    color: #000000; /* Màu chữ */
+    padding: 10px 20px; /* Khoảng cách bên trong giống nút */
+    border-radius: 30px; /* Bo góc */
+    font-weight: bold;
+    text-decoration: none; /* Xóa gạch chân mặc định */
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Đổ bóng nhẹ */
+    transition: background 0.3s ease;
+    font-family: 'Playfair Display', serif; 
+}
+
+.chat-btn:hover {
+    background-color: #5a494791; /* Đổi màu khi rê chuột */
+}
+
+.add-to-cart-btn {
+    background-color: #f6c65f; /* Màu nền nút thêm vào giỏ hàng */
+    color: #000000; /* Màu chữ */
+    font-family: 'Playfair Display', serif; 
+}
+
+.buy-now-btn {
+    background-color: #e74c3c; /* Màu nền nút mua ngay */
+    color: white; /* Màu chữ */
+    font-family: 'Playfair Display', serif; 
+}
+
+
+.wrapper {
+    display: flex; /* Đặt hình và nội dung cạnh nhau */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    justify-content: space-between; /* Tạo khoảng cách hợp lý */
+    max-width: 900px; /* Giới hạn chiều rộng tổng thể */
+    margin: 50px auto; /* Căn giữa toàn bộ */
+}
+
+.image-container {
+    width: 45%; /* Giữ chiều rộng không đổi */
+    max-width: 350px;
+    height: 400px; /* Tăng chiều cao khung chứa */
+    background-color: #fffcda;
+    border-radius: 20px;
+    padding: 15px;
+    display: flex;
+    align-items: center; /* Căn giữa ảnh theo chiều dọc */
+    justify-content: center; /* Căn giữa ảnh theo chiều ngang */
+}
+
+.image-container img {
+    width: 110%; /* Đảm bảo ảnh vừa với khung theo chiều ngang */
+    height: 110%; /* Đảm bảo ảnh vừa với khung theo chiều dọc */
+    object-fit: cover; /* Giúp ảnh lấp đầy khung mà không bị méo */
+    border-radius: 15px; /* Bo góc ảnh */
+}
+
+
+
+.container {
+    width: 55%; /* Phần nội dung chiếm 55% */
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Căn nội dung sang trái */
+    text-align: left; /* Căn chữ sang trái */
+}
+
+/* Modal background */
+.modal {
+    display: none; /* Ẩn modal ban đầu */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Nền tối */
+    justify-content: center;
+    align-items: center;
+}
+
+/* Nội dung trong modal */
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+/* Nút đóng modal */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Tiêu đề trong modal */
+.modal-content h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Form liên hệ */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input, .contact-form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Đảm bảo nút gửi đẹp mắt */
+.contact-form button {
+    background-color: #f6c65f;
+    color: #000;
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+
+.contact-form button:hover {
+    background-color: #e74c3c;
+    color: white;
+}
+
+/* Nếu có lỗi xảy ra với các input */
+.contact-form input:invalid, .contact-form textarea:invalid {
+    border: 1px solid red;
+}
+
+
+

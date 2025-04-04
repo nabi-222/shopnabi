@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="buy.css"> <!-- Kết nối file CSS -->
+    <title>Giỏ hàng</title>
+</head>
+<body>
+    
+    
+    <div class="wrapper">
+        <div class="image-container">
+            <img src="images/kẹp B-1.png" alt="Mô tả sản phẩm">
+        </div>
+    
+        <div class="container">
+            <h1 class="product-title">scrunchies</h1>
+            <div class="product-info">
+                <div class="rating">⭐⭐⭐⭐⭐</div>
+                <p class="price">14.000 vnđ</p>
+                <p class="description">Mô tả sản phẩm</p>
+                <h2>Sản phẩm được khoanh tròn là một chiếc scrunchie (dây buộc tóc vải), với tông màu hồng nhạt chủ đạo và có các mảng vải ghép hoặc họa tiết nhẹ, tạo cảm giác nữ tính, trẻ trung.
+                    Đặc điểm nổi bật:
+                        •	Kiểu dáng phồng và co giãn, giúp cố định tóc chắc chắn mà không gây đau.
+                        •	Chất liệu vải mềm mại, không gây hại tóc.
+                        •	Màu sắc pastel dễ phối với nhiều phong cách trang phục khác nhau.
+                    </h2>
+            </div>
+            <div class="button-container">
+                <a href="index.html#menu" class="button back-btn">Menu</a>
+                <a href="index.html#contact" class="button chat-btn">Chat ngay</a>
+                <button id="buy-now-btn" class="button buy-now-btn">Mua ngay</button>
+            </div>                               
+        </div>
+    </div>
+    
+
+
+<!-- Modal -->
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Thông tin Khách hàng</h2>
+        <form action="https://formspree.io/f/xblgakgp" method="POST" class="contact-form">
+            <input type="text" name="name" placeholder="Your name" required>
+            <input type="email" name="email" placeholder="Your email"S required>
+            <input type="number" name="số lượng" placeholder="Số lượng" min="1" value="1" required>
+            <textarea name="message" placeholder="Your message" rows="4" required></textarea>
+            <button type="submit">Gửi</button>
+        </form>
+    </div>
+</div>
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        let modal = document.getElementById("modal");
+        let buyBtn = document.getElementById("buy-now-btn");
+        let closeBtn = document.querySelector(".close");
+    
+        if (modal && buyBtn && closeBtn) {
+            // Mở modal khi nhấn nút "Mua ngay"
+            buyBtn.addEventListener("click", function () {
+                modal.style.display = "flex";
+            });
+    
+            // Đóng modal khi nhấn nút "X"
+            closeBtn.addEventListener("click", function () {
+                modal.style.display = "none";
+            });
+    
+            // Đóng modal khi nhấn ra ngoài
+            window.addEventListener("click", function (event) {
+                if (event.target === modal) {
+                    modal.style.display = "none";
+                }
+            });
+        } else {
+            console.error("Không tìm thấy phần tử modal hoặc nút.");
+        }
+    });
+    </script>
+    
+  
+</body>
+</html>

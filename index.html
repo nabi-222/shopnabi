@@ -8,6 +8,8 @@
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
     
     <!-- Custom CSS -->
     <link rel="stylesheet" href="main.css">
@@ -17,39 +19,13 @@
 
     <!-- Header -->
     <header>
+        <a href="#" class="logo">Nabi</a>
+    
+        <!-- Toggler để ẩn/hiện menu (dành cho mobile) -->
         <input type="checkbox" id="toggler">
-        <label for="toggler" class="fa fa-bars"></label> 
-
-        <header>
-            <!-- Logo nằm bên trái -->
-            <a href="#" class="logo">
-                <img src="images/loo.png" alt="">
-                
-            </a>
-        
-            <!-- Menu nằm ở giữa -->
-            <nav class="navbar">
-                <a href="#home">Home</a>
-                <a href="#introduce">Introduce</a>
-                <a href="#menu">Menu</a>
-                <a href="#review">Review</a>
-                <a href="#contact">Contact</a>
-            </nav>
-        
-            <!-- Icons nằm bên phải -->
-            <div class="icons">
-                <a href="#"><i class="fas fa-heart"></i></a>
-                <a href="#"><i class="fas fa-cart-shopping"></i></a>
-                <a href="#"><i class="fas fa-user"></i></a>
-            </div>
-        
-            <!-- Toggler để ẩn/hiện menu (khi mobile) -->
-            <input type="checkbox" id="toggler">
-            <label for="toggler" class="fa fa-bars"></label>
-        </header>
-        
-
-
+        <label for="toggler" class="fa fa-bars"></label>
+    
+        <!-- Menu chính -->
         <nav class="navbar">
             <a href="#home">Home</a>
             <a href="#introduce">Introduce</a>
@@ -57,28 +33,58 @@
             <a href="#review">Review</a>
             <a href="#contact">Contact</a>
         </nav>
-
-            <input type="checkbox" id="toggler">
-            <label for="toggler" class="fa fa-bars"></label>
-        
+    
+        <!-- Icons bên phải -->
         <div class="icons">
             <a href="#"><i class="fas fa-heart"></i></a>
-            <a href="#"><i class="fas fa-cart-shopping"></i></a> 
+            <a href="#"><i class="fas fa-cart-shopping"></i></a>
             <a href="#"><i class="fas fa-user"></i></a>
         </div>
-    </header>
+    </header>  
     <!-- Header End -->
 
-    <!-- Home Section -->
-    <section class="home" id="home">
-        <div class="content">
-            <h3>Pastel Charm</h3>
-            <span>Phụ kiện trong veo như sắc màu pastel</span>
-            <p>Chào mừng bạn đến với cửa hàng Nabi, với những món phụ kiện đáng yêu .</p>
-            <a href="#" class="btn">Shop Now</a>
+
+<section class="home" id="home">
+
+    <section class="home">
+        <!-- Thanh slider ở trên -->
+        <div class="slider slider-top" style="--width: 100px; --height: 50px; --quantity: 10; margin-top:150px; margin-bottom:20px; left:500px; right: 50px;">
+          <div class="list">
+            <div class="item" style="--position:1;"><img src="images/sale.png" alt="Sale 1"></div>
+            <div class="item" style="--position:2;"><img src="images/sale2.png" alt="Sale 2"></div>
+            <div class="item" style="--position:3;"><img src="images/sale.png" alt="Sale 1"></div>
+            <div class="item" style="--position:4;"><img src="images/sale2.png" alt="Sale 2"></div>
+            <div class="item" style="--position:5;"><img src="images/sale.png" alt="Sale 1"></div>
+            <div class="item" style="--position:6;"><img src="images/sale2.png" alt="Sale 2"></div>
+            <div class="item" style="--position:7;"><img src="images/sale.png" alt="Sale 1"></div>
+            <div class="item" style="--position:8;"><img src="images/sale2.png" alt="Sale 2"></div>
+            <div class="item" style="--position:9;"><img src="images/sale.png" alt="Sale 1"></div>
+            <div class="item" style="--position:10;"><img src="images/sale2.png" alt="Sale 2"></div>
+          </div>
         </div>
-    </section> 
-    <!-- Home Section End -->
+      
+        <!-- Thanh slider ở dưới -->
+        <div class="slider slider-bottom" style="--width: 100px; --height: 100px; --quantity: 10; margin-top: 275px; right: 0; left: -500px;">
+          <div class="list">
+            <div class="item" style="--position:1;"><img src="images/a.png" alt="Abcdef 1"></div>
+            <div class="item" style="--position:2;"><img src="images/b.png" alt="Abcdef 2"></div>
+            <div class="item" style="--position:3;"><img src="images/c.png" alt="Abcdef 1"></div>
+            <div class="item" style="--position:4;"><img src="images/d.png" alt="Abcdef 2"></div>
+            <div class="item" style="--position:5;"><img src="images/e.png" alt="Abcdef 1"></div>
+            <div class="item" style="--position:6;"><img src="images/f.png" alt="Abcdef 2"></div>
+            <div class="item" style="--position:7;"><img src="images/c.png" alt="Abcdef 1"></div>
+            <div class="item" style="--position:8;"><img src="images/d.png" alt="Abcdef 2"></div>
+            <div class="item" style="--position:9;"><img src="images/e.png" alt="Abcdef 1"></div>
+            <div class="item" style="--position:10;"><img src="images/f.png" alt="Abcdef 2"></div>
+            
+          </div>
+        </div>
+      </section>
+
+
+</section>
+ 
+    
 
     <!-- introduce section starts -->
     <section class="introduce" id="introduce">
@@ -91,309 +97,46 @@
             </div>
 
             <div class="content">
-                <h3>Tại sao lại có chiếc web đáng yêu như này?</h3>
-                <p>Để phụ vụ cho việc học, nên chúng tôi đã làm ra web này-v-</p>
-                <p>Web làm nên chỉ mang tính chất học tập, nhưng sản phẩm và dịch vụ của chúng tôi sẽ mang đến trải nghiệm và chất lượng tốt nhất đến với các bạn.</p>
-                <a href="#" class="btn">Learn More</a>
+                <h3>CHÀO MỪNG BẠN ĐÃ GHÉ THĂM SHOP</h3>
+                <p>Chúng tôi rất vui khi bạn đến và trải nghiệm dịch vụ của chúng tôi.</p>
+                <p>Chúng tôi sẽ luôn đồng hành và hỗ trợ các bạn trong suốt quá trình mua sắm.</p>
+                <p>Chúc bạn có một buổi mua sắm thật vui vẻ, Thank's(⁠*⁠˘⁠︶⁠˘⁠*⁠)⁠.⁠｡⁠*⁠♡</p> 
             </div>
         </div>
     </section>
     <!-- introduce section ends -->
 
     <!-- menu section starts -->
-
     <section class="products" id="menu">
 
         <h1 class ="heading"> Menu<span></span></h1>
 
-        <div class="box-container">
-
+        <div class="container">
             <div class="box">
-                <span class="discount">-25%</span>
-                <div class="image">
-                    <img src="images/1.png" alt="">
-                </div>
-            
-                <!-- Các nút icon nằm sau ảnh -->
-                <div class="actions">
-                    <a href="#" class="icon"><i class="fas fa-heart"></i></a>
-                    <a href="#" class="add-to-cart"><i class="fas fa-cart"></i> Add To Cart</a>
-                    <a href="#" class="icon"><i class="fas fa-share"></i></a>
-                </div>
-            
-                <div class="content">
-                    <h3>SCRUNCHIES</h3> 
-                    <div class="price"> 15 cá <span> 20 cá </span></div>
-                </div>
-            </div>           
-
+                <a href="index1.html">
+                    <div class="image">
+                        <img src="images/scunchies.png" alt="">
+                    </div>
+                </a>       
+            </div>                   
+    
             <div class="box">
-                <span class="discount">-25%</span>
-                <div class="image">
-                    <img src="images/2.png" alt="">
-                </div>
-            
-                <!-- Các nút icon nằm sau ảnh -->
-                <div class="actions">
-                    <a href="#" class="icon"><i class="fas fa-heart"></i></a>
-                    <a href="#" class="add-to-cart"><i class="fas fa-cart"></i> Add To Cart</a>
-                    <a href="#" class="icon"><i class="fas fa-share"></i></a>
-                </div>
-            
-                <div class="content">
-                    <h3>SCRUNCHIES</h3> 
-                    <div class="price"> 15 cá <span> 20 cá </span></div>
-                </div>
-            </div>
-
+                <a href="index2.html">
+                    <div class="image">
+                        <img src="images/teddy.png" alt="">
+                    </div>
+                </a>       
+            </div>                   
+    
             <div class="box">
-                <span class="discount">-25%</span>
-                <div class="image">
-                    <img src="images/3.png" alt="">
-                </div>
-            
-                <!-- Các nút icon nằm sau ảnh -->
-                <div class="actions">
-                    <a href="#" class="icon"><i class="fas fa-heart"></i></a>
-                    <a href="#" class="add-to-cart"><i class="fas fa-cart"></i> Add To Cart</a>
-                    <a href="#" class="icon"><i class="fas fa-share"></i></a>
-                </div>
-            
-                <div class="content">
-                    <h3>SCRUNCHIES</h3> 
-                    <div class="price"> 15 cá <span> 20 cá </span></div>
-                </div>
-            </div>
-
-            <div class="box">
-                <span class="discount">-40%</span>
-                <div class="image">
-                    <img src="images/4.png" alt="">
-                </div>
-            
-                <!-- Các nút icon nằm sau ảnh -->
-                <div class="actions">
-                    <a href="#" class="icon"><i class="fas fa-heart"></i></a>
-                    <a href="#" class="add-to-cart"><i class="fas fa-cart"></i> Add To Cart</a>
-                    <a href="#" class="icon"><i class="fas fa-share"></i></a>
-                </div>
-            
-                <div class="content">
-                    <h3>BANGS CLIP</h3> 
-                    <div class="price"> 12 cá <span> 20 cá </span></div>
-                </div>
-            </div>
-
-            <div class="box">
-                <span class="discount">-40%</span>
-                <div class="image">
-                    <img src="images/5.png" alt="">
-                </div>
-            
-                <!-- Các nút icon nằm sau ảnh -->
-                <div class="actions">
-                    <a href="#" class="icon"><i class="fas fa-heart"></i></a>
-                    <a href="#" class="add-to-cart"><i class="fas fa-cart"></i> Add To Cart</a>
-                    <a href="#" class="icon"><i class="fas fa-share"></i></a>
-                </div>
-            
-                <div class="content">
-                    <h3>BANGS CLIP</h3> 
-                    <div class="price"> 12 cá <span> 20 cá </span></div>
-                </div>
-            </div>
-
-            <div class="box">
-                <span class="discount">-40%</span>
-                <div class="image">
-                    <img src="images/6.png" alt="">
-                </div>
-            
-                <!-- Các nút icon nằm sau ảnh -->
-                <div class="actions">
-                    <a href="#" class="icon"><i class="fas fa-heart"></i></a>
-                    <a href="#" class="add-to-cart"><i class="fas fa-cart"></i> Add To Cart</a>
-                    <a href="#" class="icon"><i class="fas fa-share"></i></a>
-                </div>
-            
-                <div class="content">
-                    <h3>BANGS CLIP</h3> 
-                    <div class="price"> 12 cá <span> 20 cá </span></div>
-                </div>
-            </div>
-
-            <div class="box">
-                <span class="discount">-12%</span>
-                <div class="image">
-                    <img src="images/7.png" alt="">
-                </div>
-            
-                <!-- Các nút icon nằm sau ảnh -->
-                <div class="actions">
-                    <a href="#" class="icon"><i class="fas fa-heart"></i></a>
-                    <a href="#" class="add-to-cart"><i class="fas fa-cart"></i> Add To Cart</a>
-                    <a href="#" class="icon"><i class="fas fa-share"></i></a>
-                </div>
-            
-                <div class="content">
-                    <h3>HAIRCLIP</h3> 
-                    <div class="price"> 18 cá <span> 20 cá </span></div>
-                </div>
-            </div>
-
-            <div class="box">
-                <span class="discount">-12%</span>
-                <div class="image">
-                    <img src="images/8.png" alt="">
-                </div>
-            
-                <!-- Các nút icon nằm sau ảnh -->
-                <div class="actions">
-                    <a href="#" class="icon"><i class="fas fa-heart"></i></a>
-                    <a href="#" class="add-to-cart"><i class="fas fa-cart"></i> Add To Cart</a>
-                    <a href="#" class="icon"><i class="fas fa-share"></i></a>
-                </div>
-            
-                <div class="content">
-                    <h3>HAIRCLIP</h3> 
-                    <div class="price"> 18 cá <span> 20 cá </span></div>
-                </div>
-            </div>
-
-            <div class="box">
-                <span class="discount">-12%</span>
-                <div class="image">
-                    <img src="images/9.png" alt="">
-                </div>
-            
-                <!-- Các nút icon nằm sau ảnh -->
-                <div class="actions">
-                    <a href="#" class="icon"><i class="fas fa-heart"></i></a>
-                    <a href="#" class="add-to-cart"><i class="fas fa-cart"></i> Add To Cart</a>
-                    <a href="#" class="icon"><i class="fas fa-share"></i></a>
-                </div>
-            
-                <div class="content">
-                    <h3>HAIRCLIP</h3> 
-                    <div class="price"> 18 cá <span> 20 cá </span></div>
-                </div>
-            </div>
-
-            <div class="box">
-                <span class="discount">-8%</span>
-                <div class="image">
-                    <img src="images/10.png" alt="">
-                </div>
-            
-                <!-- Các nút icon nằm sau ảnh -->
-                <div class="actions">
-                    <a href="#" class="icon"><i class="fas fa-heart"></i></a>
-                    <a href="#" class="add-to-cart"><i class="fas fa-cart"></i> Add To Cart</a>
-                    <a href="#" class="icon"><i class="fas fa-share"></i></a>
-                </div>
-            
-                <div class="content">
-                    <h3>BOW CLIP</h3> 
-                    <div class="price"> 23 cá <span> 25 cá </span></div>
-                </div>
-            </div>
-
-            <div class="box">
-                <span class="discount">-8%</span>
-                <div class="image">
-                    <img src="images/11.png" alt="">
-                </div>
-            
-                <!-- Các nút icon nằm sau ảnh -->
-                <div class="actions">
-                    <a href="#" class="icon"><i class="fas fa-heart"></i></a>
-                    <a href="#" class="add-to-cart"><i class="fas fa-cart"></i> Add To Cart</a>
-                    <a href="#" class="icon"><i class="fas fa-share"></i></a>
-                </div>
-            
-                <div class="content">
-                    <h3>BOW CLIP</h3> 
-                    <div class="price"> 23 cá <span> 25 cá </span></div>
-                </div>
-            </div>
-
-            <div class="box">
-                <span class="discount">-8%</span>
-                <div class="image">
-                    <img src="images/12.png" alt="">
-                </div>
-            
-                <!-- Các nút icon nằm sau ảnh -->
-                <div class="actions">
-                    <a href="#" class="icon"><i class="fas fa-heart"></i></a>
-                    <a href="#" class="add-to-cart"><i class="fas fa-cart"></i> Add To Cart</a>
-                    <a href="#" class="icon"><i class="fas fa-share"></i></a>
-                </div>
-            
-                <div class="content">
-                    <h3>BOW CLIP</h3> 
-                    <div class="price"> 23 cá <span> 25 cá </span></div>
-                </div>
-            </div>
-
-            <div class="box">
-                <span class="discount">-12%</span>
-                <div class="image">
-                    <img src="images/13.png" alt="">
-                </div>
-            
-                <!-- Các nút icon nằm sau ảnh -->
-                <div class="actions">
-                    <a href="#" class="icon"><i class="fas fa-heart"></i></a>
-                    <a href="#" class="add-to-cart"><i class="fas fa-cart"></i> Add To Cart</a>
-                    <a href="#" class="icon"><i class="fas fa-share"></i></a>
-                </div>
-            
-                <div class="content">
-                    <h3>HAT</h3> 
-                    <div class="price"> 128 cá <span> 145 cá </span></div>
-                </div>
-            </div>
-
-            <div class="box">
-                <span class="discount">-12%</span>
-                <div class="image">
-                    <img src="images/14.png" alt="">
-                </div>
-            
-                <!-- Các nút icon nằm sau ảnh -->
-                <div class="actions">
-                    <a href="#" class="icon"><i class="fas fa-heart"></i></a>
-                    <a href="#" class="add-to-cart"><i class="fas fa-cart"></i> Add To Cart</a>
-                    <a href="#" class="icon"><i class="fas fa-share"></i></a>
-                </div>
-            
-                <div class="content">
-                    <h3>HAT</h3> 
-                    <div class="price"> 128 cá <span> 145 cá </span></div>
-                </div>
-            </div>
-
-            <div class="box">
-                <span class="discount">-12%</span>
-                <div class="image">
-                    <img src="images/15.png" alt="">
-                </div>
-            
-                <!-- Các nút icon nằm sau ảnh -->
-                <div class="actions">
-                    <a href="#" class="icon"><i class="fas fa-heart"></i></a>
-                    <a href="#" class="add-to-cart"><i class="fas fa-cart"></i> Add To Cart</a>
-                    <a href="#" class="icon"><i class="fas fa-share"></i></a>
-                </div>
-            
-                <div class="content">
-                    <h3>HAT</h3> 
-                    <div class="price"> 128 cá <span> 145 cá </span></div>
-                </div>
-            </div>
-
+                <a href="index3.html">
+                    <div class="image">
+                        <img src="images/KẸP.png" alt="">
+                    </div>
+                </a>       
+            </div>  
         </div>
+    
     </section>
     <!-- products section ends -->
 
@@ -473,23 +216,28 @@
   <!-- contact section starts -->
 
   <section class="contact" id="contact">
-    <h1 class="heading"><span>Contact</span></h1>
-  
+    <h1 class="heading"><span>Thanks For Visting</span></h1>
     <div class="row">
-      <form action="">
-        <input type="text" placeholder="Name" class="box" />
-        <input type="email" placeholder="Email" class="box" />
-        <input type="number" placeholder="Number" class="box" />
-        <textarea placeholder="Message" class="box" rows="5"></textarea>
-        <button type="submit" class="btn">Send Message</button>
-      </form>
-  
-      <div class="image">
-        <img src="images/cảm ơn.png" alt="contact image" />
-      </div>
+        <div class="contact-info">
+            <h2 class="subtitle"></h2>
+            <h1 class="title"></h1>
+            <div class="social-container">
+                <a href="https://www.instagram.com/nabi.vn8653" target="_blank">
+                    <img src="images/ig.png" alt="Instagram" class="social-icon">
+                </a>
+                <a href="https://www.tiktok.com/@nabishop357" target="_blank">
+                    <img src="images/tiktok.png" alt="TikTok" class="social-icon">
+                </a>
+                <a href="https://www.facebook.com/share/18q1tcYbon" target="_blank">
+                    <img src="images/fb.png" alt="Facebook" class="social-icon">
+                </a>
+            </div>
+            
+            <h3 class="name">NABI SHOP</h3>
+            <p class="role"></p>
+        </div>
     </div>
-  </section>
-  
+</section>
   <!-- contact section ends-->
 
   <!--footer section starts-->
@@ -523,10 +271,8 @@
   
       <div class="box">
         <h3>Contact Info</h3>
-        <a href="#">Sương</a>
-        <a href="#">Kiệt</a>
-        <a href="#">Thảo</a>
-        <a href="#">Vinh</a>
+        <a href="#">@Nabi Shop</a>
+        <a href="#">Nguyễn Ngọc Thảo</a>
       </div>
     </div>
   
@@ -534,7 +280,6 @@
       Created By <span>Sương</span> | All Rights Reserved |
     </div>
   </section>
-  
   <!--footer section ends-->
 </body>
 </html>
