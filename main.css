@@ -17,7 +17,7 @@ html {
 }
 
 body {
-    background-color: #f1daaf;
+    background-color: #f2ddd5;
     overflow-x: hidden;
 
     
@@ -58,7 +58,7 @@ header {
     top: 0;
     left: 0;
     right: 0;
-    background: #f1daaf;
+    background:#cb475a;
     padding: 0.5rem 3%;
     height: 60px; 
     display: flex;
@@ -70,7 +70,7 @@ header {
 
 header .logo {
     font-size: 2.5rem;
-    color: #c33436;
+    color: #ffffff;
     font-weight: bolder;
 }
 
@@ -90,7 +90,7 @@ header .navbar {
 
 header .navbar a {
     font-size: 1rem;
-    color: #c33436;
+    color: #ffffff;
     padding: 0.5rem;
 }
 
@@ -116,7 +116,7 @@ header .logo {
 }
 
 header .logo .nabi {
-    font-size: 1.8rem;   /* Chỉnh kích thước chữ cho bằng logo */
+    font-size: 2rem;   /* Chỉnh kích thước chữ cho bằng logo */
     color: var(--pink);
     font-weight: bold;
 }
@@ -132,7 +132,7 @@ header .logo .nabi {
     font-family: 'Amoria', sans-serif;
     font-size: 3rem;
     font-weight: normal;
-    color: #c33436;
+    color: #ffffff;
 }
 
 
@@ -149,7 +149,7 @@ header .navbar a:hover {
 
 header .icons a {
     font-size: 1.2rem;
-    color: #c33436;
+    color: #ffffff;
     margin-left: 1.5rem;
 }
 
@@ -159,53 +159,30 @@ header .icons a {
     display: none;
 }
 
-header label.fa-bars {
-    font-size: 2rem;
-    border-radius: 5rem;
-    padding: 1rem;
-    cursor: pointer;
-    border: 0.3rem solid rgba(236, 208, 212, 0.833);
-    display: none;
-}
+
 
 
 
 /* ======== HOME ======== */
 .home {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #f1daaf;
-    background-image: url(images/nền\ sale.png);
-    min-height: 100vh;
-    background-repeat: no-repeat;
-    background-size: 30%;
-    background-position: center calc(50% - 100px);    
-    text-align: center;
-    padding: 2rem;
+  min-height: 100vh;                    /* Chiều cao luôn bằng chiều cao màn hình */
+  background-image: url('images/anen.png'); /* ← thay đường dẫn ảnh nền */
+  background-size: cover;              /* Ảnh phủ kín vùng chứa */
+  background-position: center;         /* Căn giữa ảnh */
+  background-repeat: no-repeat;        /* Không lặp lại */
+  background-attachment: fixed;        /* (tuỳ chọn) cuộn theo nền */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
 }
 
-.home .content {
-    max-width: 50rem;
+img {
+  width: auto;
+  max-width: none;
 }
 
-.home .content h3 {
-    font-size: 3rem;
-    color: #333;
-}
 
-.home .content span {
-    font-size: 1.5rem;
-    color: var(--pink);
-    display: block;
-    margin: 1rem 0;
-}
-
-.home .content p {
-    font-size: 1.2rem;
-    color: #8f1a1a;
-    line-height: 1.5;
-}
 
 .slider {
     width: 100%;
@@ -234,12 +211,12 @@ header label.fa-bars {
   
   .slider::before {
       left: 0;
-      background: linear-gradient(to right, rgb(241, 218, 175, 1) 0%, rgba(241, 218, 175, 0) 100%);
+      background: linear-gradient(to right, rgb(242, 221, 213, 1) 0%, rgba(241, 218, 175, 0) 100%);
   }
   
   .slider::after {
       right: 0;
-      background: linear-gradient(to left, rgba(241, 218, 175, 1) 0%, rgba(255, 255, 255, 0) 100%);
+      background: linear-gradient(to left, rgba(242, 221, 213, 1) 0%, rgba(255, 255, 255, 0) 100%);
   }
   
   
@@ -279,6 +256,16 @@ header label.fa-bars {
     filter:grayscale(0);
   }
   
+  .background-blur {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; /* ✅ tránh che thanh cuộn */
+    height: 100vh;
+    backdrop-filter: blur(10px);
+    z-index: -1;
+  }
+  
   @keyframes autoRun {
     from {
       left: 100%;
@@ -288,9 +275,25 @@ header label.fa-bars {
     }
   }
 
+  .banner {
+    display: flex;
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    align-items: center;
+    width: 80%;
+    overflow: hidden;
+    margin: 0 auto;
+  }
+  
+  .banner img {
+    width: auto; /* Giữ nguyên kích thước ảnh */
+    max-width: none; /* Không cho thu nhỏ */
+    height: auto;
+  }
+  
+
 /* ======== INTRODUCE ======== */
 .introduce {
-    margin-top: 60; /* Đảm bảo không có khoảng cách ở trên */
+    margin-top: 60px; /* Đảm bảo không có khoảng cách ở trên */
     padding-top: 0; /* Đảm bảo không có padding phía trên */
 }
 .introduce .row {
@@ -333,10 +336,140 @@ header label.fa-bars {
     margin: 1rem 0;
 }
 
+.countdown-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 10px;
+    position: relative;
+    padding: 40px 20px;
+    background-image: url(images/nền-sale2.png);
+  }
+  
+  /* ----- Đồng hồ ----- */
+  .countdown-box {
+    position: relative;
+    text-align: center;
+    z-index: 2;
+    transform: translateY(-10px); /* đẩy lên nếu cần */
+  background-size: cover;           /* Căn hình phủ toàn bộ */
+  background-position: center;      /* Căn giữa hình */
+  background-repeat: no-repeat;     /* Không lặp hình */
+  padding: 60px 20px;               /* Giữ khoảng cách đẹp */
+  position: relative;               
+  }
+  .sign-img {
+    position: absolute;
+    top: -40px;
+    right: -10px;
+    width: 100px;
+    transform: rotate(-10deg);
+    z-index: 5;
+  }
 
+  .countdown-box h2 {
+    font-size: 36px;   /* ← chỉnh cỡ chữ tại đây */
+    color: #2e2528;     /* tuỳ chọn màu nổi bật */
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+  
+  
+  #timer {
+    display: flex;
+    justify-content: center;
+    gap: 25px; /* tăng khoảng cách giữa các khối */
+    margin-top: 10px;
+  }
+  
+  #timer div {
+    background: #fff;
+    padding: 20px 30px; /* tăng padding để khối lớn hơn */
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+  
+  #timer span {
+    font-size: 36px; /* tăng cỡ chữ số */
+    font-weight: bold;
+    color: #e91e63;
+    display: block;
+  }
+  
+  @media (max-width: 768px) {
+    #timer {
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+  
+    #timer div {
+      padding: 10px 15px;
+    }
+  
+    #timer span {
+      font-size: 22px;
+    }
+  }
+  
+  
+  /* ----- Bảng hiệu ----- */
+  /* ----- Hộp quà bên dưới ----- */
 
+  .gift-img {
+    width: 500px; /* Giữ nguyên kích thước thực tế */
+    transform: scale(1.3); /* Phóng to 30% */
+    transform-origin: center bottom; /* Lấy gốc phóng từ giữa dưới */
+    animation: shake-glow-bounce 2s infinite ease-in-out;
+    cursor: pointer;
+  }
+  
+  /* Hiệu ứng kết hợp: lắc + phát sáng + nảy nhẹ */
+  @keyframes shake-glow-bounce {
+    0% {
+      transform: rotate(0deg) translateY(0);
+      filter: drop-shadow(0 0 0px #ff69b4);
+    }
+    25% {
+      transform: rotate(5deg) translateY(-3px);
+      filter: drop-shadow(0 0 8px #ff69b4);
+    }
+    50% {
+      transform: rotate(0deg) translateY(0);
+      filter: drop-shadow(0 0 0px #ff69b4);
+    }
+    75% {
+      transform: rotate(-5deg) translateY(-3px);
+      filter: drop-shadow(0 0 8px #ff69b4);
+    }
+    100% {
+      transform: rotate(0deg) translateY(0);
+      filter: drop-shadow(0 0 0px #ff69b4);
+    }
+  }
+  
+  
+  .gift-img:hover {
+    transform: scale(1.1);
+  }
+  
+  /* ----- Nhân vật ----- */
+  .person-img {
+    position: absolute;
+    top: 200px;
+    right: 95px;
+    width: 150px;
+    z-index: 3;
+  }
+  
 /* ======== PRODUCTS ======== */
-
+.products {
+    background-image: url('images/nền-menu.png');  /* ← đường dẫn ảnh nền */
+    background-size: cover;         /* phủ toàn bộ */
+    background-position: center;    /* căn giữa */
+    background-repeat: no-repeat;   /* không lặp lại */
+    padding: 60px 20px;             /* tạo khoảng cách */
+  }
+  
 .container {
     display: flex;
     justify-content: center; /* Căn giữa các phần tử theo chiều ngang */
@@ -673,3 +806,40 @@ body {
         background-position: left;
     }
 }
+
+@media (max-width: 768px) {
+  header .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #ca455962;
+    flex-direction: column;
+    align-items: center;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+
+  header #toggler:checked ~ .navbar {
+    max-height: 300px; /* hoặc auto */
+  }
+
+  header .fa-bars {
+    display: block;
+  }
+}
+
+@media (max-width: 768px) {
+  .content-flex {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .content-flex > div {
+    width: 100%;
+  }
+}
+
+
+

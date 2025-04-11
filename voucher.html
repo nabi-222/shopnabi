@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop Nabi</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="main.css">
+
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <a href="#" class="logo">Nabi</a>
+    
+        <!-- Toggler để ẩn/hiện menu (dành cho mobile) -->
+        <input type="checkbox" id="toggler">
+        <label for="toggler" class="fa fa-bars"></label>
+    
+        <!-- Menu chính -->
+        <nav class="navbar">
+            <a href="#home">Home</a>
+            <a href="#introduce">Introduce</a>
+            <a href="#menu">Menu</a>
+            <a href="#review">Review</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    
+        <!-- Icons bên phải -->
+        <div class="icons">
+            <a href="#"><i class="fas fa-heart"></i></a>
+            <a href="#"><i class="fas fa-cart-shopping"></i></a>
+            <a href="#"><i class="fas fa-user"></i></a>
+        </div>
+    </header>  
+
+    <!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Voucher Hot</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #fff;
+    }
+
+    .title {
+      font-size: 32px;
+      font-weight: bold;
+      margin-top: 20px;
+      color: #fff;
+      background: linear-gradient(to right, #ff6f91, #ffb347);
+      display: inline-block;
+      padding: 10px 30px;
+      border-radius: 20px;
+      margin-bottom: 30px;
+    }
+
+    .voucher-container {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .voucher-box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .voucher-img {
+      width: 300px;
+      height: auto;
+    }
+
+    .voucher-img:hover{
+      transform: scale(1.2); 
+    }
+
+    .voucher-label {
+      margin-top: 10px;
+      padding: 8px 12px;
+      background-color: #ffe680;
+      border: 2px solid #f1c40f;
+      border-radius: 20px;
+      font-size: 14px;
+      position: relative;
+      cursor: pointer;
+      min-width: 240px;
+      transition: background-color 0.3s;
+    }
+
+    .voucher-label:hover {
+      background-color: #fff176;
+    }
+
+    .hand-icon {
+      position: absolute;
+      left: -25px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 18px;
+    }
+
+    .used {
+      background-color: #dcdcdc;
+      border-color: #aaa;
+      cursor: default;
+      color: #555;
+    }
+
+    .copy-btn {
+      margin-left: 10px;
+      padding: 2px 8px;
+      font-size: 12px;
+      background-color: #3498db;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .copy-btn:hover {
+      background-color: #2980b9;
+    }
+  </style>
+</head>
+<body>
+  <div class="title">VOUCHER HOT</div>
+
+  <div class="voucher-container">
+    <div class="voucher-box">
+      <img src="images/voucher.png" alt="Voucher" class="voucher-img">
+      <div class="voucher-label" id="voucher-0" onclick="revealCode(this, 0)">
+        <span class="hand-icon">👉</span>
+        Click vào để nhận voucher bí mật
+      </div>
+    </div>
+    <div class="voucher-box">
+      <img src="images/voucher.png" alt="Voucher" class="voucher-img">
+      <div class="voucher-label" id="voucher-1" onclick="revealCode(this, 1)">
+        <span class="hand-icon">👉</span>
+        Click vào để nhận voucher bí mật
+      </div>
+    </div>
+    <div class="voucher-box">
+      <img src="images/voucher.png" alt="Voucher" class="voucher-img">
+      <div class="voucher-label" id="voucher-2" onclick="revealCode(this, 2)">
+        <span class="hand-icon">👉</span>
+        Click vào để nhận voucher bí mật
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const voucherLists = [
+      ["J97560DH-10%", "GOOD LUCKY", "J952940DH-15%"],
+      ["FREESHIPB", "J972047H-25%", "GOOD LUCKY"],
+      ["GOOD LUCKY", "D34627FZ-20%", "F86393DX-30%"]
+    ];
+
+    window.onload = function () {
+      for (let i = 0; i < 3; i++) {
+        const key = `voucher-${i}`;
+
+
+        const savedCode = localStorage.getItem(key);
+        if (savedCode) {
+          const element = document.getElementById(key);
+          element.innerHTML = `Mã giảm giá: <strong>${savedCode}</strong> 
+            <button class="copy-btn" onclick="copyToClipboard('${savedCode}')">Copy</button>`;
+          element.classList.add("used");
+        }
+      }
+    };
+
+    function revealCode(element, index) {
+      const key = `voucher-${index}`;
+      if (localStorage.getItem(key)) return;
+
+      const codes = voucherLists[index];
+      const randomCode = codes[Math.floor(Math.random() * codes.length)];
+
+      element.innerHTML = `Mã giảm giá: <strong>${randomCode}</strong> 
+        <button class="copy-btn" onclick="copyToClipboard('${randomCode}')">Copy</button>`;
+      element.classList.add("used");
+
+      localStorage.setItem(key, randomCode);
+    }
+
+    function copyToClipboard(text) {
+      navigator.clipboard.writeText(text).then(() => {
+        alert("Đã sao chép mã: " + text);
+      });
+    }
+  </script>
+</body>
+</html>

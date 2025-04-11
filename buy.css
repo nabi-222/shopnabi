@@ -1,5 +1,5 @@
 body {
-    background-color: #fffcda; /* Màu nền */
+    background-image: url(images/nền-menu.png); /* Màu nền */
     font-family: Arial, sans-serif; /* Font chữ */
 }
 .container h1 {
@@ -82,15 +82,15 @@ body {
 
 .back-btn {
     display: inline-block;
-    background-color: #f4cf9d; 
-    color: #003ec7; /* Màu chữ */
+    background-color: #FFB9B9; 
+    color: #fdfeff; /* Màu chữ */
     padding: 10px 5px; /* Khoảng cách bên trong giống nút */
     border-radius: 30px; /* Bo góc */
     font-weight: bold;
     text-decoration: none; /* Xóa gạch chân mặc định */
     text-align: center;
     font-family: 'Playfair Display', serif; 
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Đổ bóng nhẹ */
+    box-shadow: 0 4px 10px rgba(101, 210, 114, 0.2); /* Đổ bóng nhẹ */
     transition: background 0.3s ease;
 }
 
@@ -102,24 +102,24 @@ body {
 
 .chat-btn {
     display: inline-block;
-    background-color: #f6c65f; /* Màu nền giống nút mua ngay */
-    color: #000000; /* Màu chữ */
+    background-color: #C33436; /* Màu nền giống nút mua ngay */
+    color: #ffffff; /* Màu chữ */
     padding: 10px 20px; /* Khoảng cách bên trong giống nút */
     border-radius: 30px; /* Bo góc */
     font-weight: bold;
     text-decoration: none; /* Xóa gạch chân mặc định */
     text-align: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Đổ bóng nhẹ */
+    box-shadow: 0 4px 10px rgba(101, 210, 114, 0.2); /* Đổ bóng nhẹ */
     transition: background 0.3s ease;
     font-family: 'Playfair Display', serif; 
 }
 
 .chat-btn:hover {
-    background-color: #5a494791; /* Đổi màu khi rê chuột */
+    background-color: #A8D5CD; /* Đổi màu khi rê chuột */
 }
 
 .add-to-cart-btn {
-    background-color: #f6c65f; /* Màu nền nút thêm vào giỏ hàng */
+    background-color: #A8D5CD; /* Màu nền nút thêm vào giỏ hàng */
     color: #000000; /* Màu chữ */
     font-family: 'Playfair Display', serif; 
 }
@@ -161,12 +161,12 @@ body {
 
 
 .container {
-    width: 55%; /* Phần nội dung chiếm 55% */
-    height: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start; /* Căn nội dung sang trái */
-    text-align: left; /* Căn chữ sang trái */
+    width: 100%;
+    max-width: 100%;
+    padding: 0 20px; /* để nội dung không dính sát mép */
+    margin: 0 auto;
+    box-sizing: border-box;
+  
 }
 
 /* Modal background */

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="buy.css"> <!-- Kết nối file CSS -->
+    <title>Giỏ hàng</title>
+</head>
+<body>
+    
+    
+    <div class="wrapper">
+        <div class="image-container">
+            <img src="images/ghim cài/cài5.png" alt="Mô tả sản phẩm">
+        </div>
+    
+        <div class="container">
+            <h1 class="product-title">pin</h1>
+            <div class="product-info">
+                <div class="rating">⭐⭐⭐⭐⭐</div>
+                <p class="price">7.000 vnđ</p>
+                <p class="description">Mô tả sản phẩm</p>
+                <h2>Ghim Cài Phụ Kiện – Nhỏ Gọn, Tinh Tế, Dễ Thương
+                    <p>Ghim cài được thiết kế đa dạng kiểu dáng: hoa, nơ, hình thú,hoạt hình,…</p>
+                    <p>Dễ dàng cài lên áo, balo, mũ, túi xách hay khăn choàng để tạo điểm nhấn nổi bật.</p>
+                    <p>Chất liệu chắc chắn, bền đẹp, phù hợp cho nhiều phong cách từ nhẹ nhàng đến cá tính.</p>
+                    </h2>
+            </div>
+            <div class="button-container">
+                <a href="index.html#menu" class="button back-btn">Menu</a>
+                <a href="index.html#contact" class="button chat-btn">Chat ngay</a>
+                <button id="buy-now-btn" class="button buy-now-btn">Mua ngay</button>
+            </div>                               
+        </div>
+    </div>
+    
+<!-- Modal -->
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Thông tin Khách hàng</h2>
+        <form action="https://formspree.io/f/xblgakgp" method="POST" class="contact-form">
+            <input type="text" name="Pin 325" placeholder="Pin 325"  readonly>
+            <input type="email" name="Email" placeholder="Email"S required>
+            <input type="text" name="Mã Giảm Giá" placeholder="Nhập mã giảm giá nếu có">
+            <input type="number" name="số lượng" placeholder="Số lượng" min="1" value="1" required>
+            <textarea name="message" placeholder="Thông Tin Khác Hàng" rows="4" required></textarea>
+            <button type="submit">Gửi</button>
+        </form>
+    </div>
+</div>
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        let modal = document.getElementById("modal");
+        let buyBtn = document.getElementById("buy-now-btn");
+        let closeBtn = document.querySelector(".close");
+    
+        if (modal && buyBtn && closeBtn) {
+            // Mở modal khi nhấn nút "Mua ngay"
+            buyBtn.addEventListener("click", function () {
+                modal.style.display = "flex";
+            });
+    
+            // Đóng modal khi nhấn nút "X"
+            closeBtn.addEventListener("click", function () {
+                modal.style.display = "none";
+            });
+    
+            // Đóng modal khi nhấn ra ngoài
+            window.addEventListener("click", function (event) {
+                if (event.target === modal) {
+                    modal.style.display = "none";
+                }
+            });
+        } else {
+            console.error("Không tìm thấy phần tử modal hoặc nút.");
+        }
+    });
+    </script>
+    
+  
+</body>
+</html>

@@ -1,0 +1,5 @@
+.voucher-img {
+    width: 180px; /* Tăng chiều rộng */
+    height: auto; /* Giữ tỉ lệ gốc */
+    object-fit: contain; /* Nếu ảnh lệch tỉ lệ */
+  }

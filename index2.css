@@ -1,66 +1,241 @@
+/* ===== Layout tổng ===== */
 .box-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    margin-left: 140px;
-    margin-top: 100px;
-    margin-right: 150px;
-    gap: 105px; /* Tạo khoảng cách giữa các sản phẩm */
-    padding: 10px; /* Thêm khoảng cách với viền ngoài */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* ⭐ 3 sản phẩm mỗi hàng */
+  gap: 40px;
+  padding: 40px 20px;
+  margin: 100px auto;
+  max-width: 1200px;
+  justify-content: center; /* Đảm bảo căn giữa */
 }
 
 
+  body {
+    background-image: url("images/nền trưng bày.png");
+    background-size: cover;            /* Phủ toàn bộ màn hình */
+    background-position: center;       /* Căn giữa */
+    background-repeat: no-repeat;      /* Không lặp lại */
+    background-attachment: fixed;      /* Dính nền khi cuộn */
+    background-color: #f2ddd5;         /* Màu nền dự phòng nếu ảnh chưa tải */
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+  }
+  
+
+/* ===== Box sản phẩm ===== */
 .box {
-    border: 10px solid #dc8190;
-    border-radius: 10px;
-    padding: 15px;
-    text-align: center;
-    background-color: #f9f9f9;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    width: 250px; /* Giữ cố định kích thước */
-    max-width: 250px;
-    margin: auto; /* Căn giữa */
-    padding: 20px;
+  width: 230px;
+  padding: 0; /* bỏ padding để ảnh khít sát khung */
+  border-radius: 12px;
+  background: transparent; /* không tạo khung nền */
+  margin: 10px;
+  overflow: hidden; /* để ảnh bo góc theo box */
+  box-shadow: none; /* bỏ đổ bóng nếu không cần */
+}
+
+/* Ảnh trong box */
+.box .image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px; /* bo tròn các góc giống box */
+  transition: transform 0.3s ease-in-out;
+}
+
+.box .image img:hover {
+  transform: scale(1.05);
+}
+
+
+.box .discount,
+.box .content {
+  display: none;
+}
+
+/* ===== Ảnh sản phẩm ===== */
+.icon-container {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* khoảng cách giữa các nút */
+  z-index: 10;
+}
+
+.icon-btn {
+  background-color: white;
+  border: 2px solid #c43b3b;
+  border-radius: 10px;
+  padding: 6px;
+  width: 36px;
+  height: 36px;
+  font-size: 18px;
+  color: #c43b3b;
+  cursor: pointer;
+  transition: transform 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-btn i {
+  pointer-events: none;
+}
+
+.icon-btn:hover {
+  transform: scale(1.1);
+}
+
+
+
+/* ===== Các nút icon ===== */
+.image {
+  position: relative;
+  text-align: center;
+}
+
+.icon-container {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* chính cái này tạo khoảng cách giữa hai nút */
+  z-index: 10;
+}
+
+.icon-btn {
+  background-color: white;
+  border: 2px solid #c43b3b;
+  border-radius: 8px;
+  width: 30px;           /* Kích thước cố định cho cả hai nút */
+  height: 30px;
+  font-size: 14px;
+  color: #c43b3b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.2s;
+  padding: 0;            /* Xoá padding để tránh lệch kích thước */
+}
+
+.icon-btn i {
+  pointer-events: none; /* đảm bảo icon không chặn sự kiện click */
+}
+
+.icon-btn:hover {
+  transform: scale(1.1);
+}
+.image img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+  object-fit: contain; /* giữ nguyên tỉ lệ ảnh */
+}
+
+
+
+
+/* ===== Style chung khác ===== */
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 .discount {
-    color: red;
-    font-size: 18px;
-    margin-bottom: 10px;
-}
-
-.image img {
-    max-width: 100%;
-    border-radius: 8px;
-    margin-bottom: 10px;
+  color: red;
+  font-size: 18px;
+  margin-bottom: 10px;
 }
 
 .content h3 {
-    font-size: 20px;
-    margin: 10px 0;
+  font-size: 20px;
+  margin: 10px 0;
 }
 
 .price {
-    font-size: 18px;
+  font-size: 18px;
 }
 
 .price span {
-    text-decoration: line-through;
-    color: gray;
+  text-decoration: line-through;
+  color: gray;
 }
 
 details {
-    margin-top: 10px;
+  margin-top: 10px;
 }
 
 summary {
-    cursor: pointer;
-    border: none;
-    background: transparent;
-    outline: none;
-    font-size: 20px;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: 20px;
 }
 
-a {
-    text-decoration: none;
-    color: inherit;
+/* ===== Thanh yêu thích phía dưới ===== */
+#favorites-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #fff0f5;
+  padding: 10px 20px;
+  border-top: 2px solid #e91e63;
+  font-size: 1.1rem;
+  z-index: 9999;
+  box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
 }
+
+#favorites-list {
+  display: inline;
+  padding-left: 10px;
+}
+
+#favorites-list li {
+  display: inline;
+  margin-right: 10px;
+  color: #d6336c;
+  font-weight: bold;
+}
+
+
+.remove-btn {
+  background: transparent;
+  border: none;
+  color: #d35b76;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.remove-btn:hover {
+  color: red;
+}
+.product-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+
+@media (max-width: 768px) {
+  .box-container {
+    grid-template-columns: 1fr; /* ⭐ 1 sản phẩm mỗi hàng */
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .box {
+    margin: 0 auto;              /* ⭐ Căn giữa từng sản phẩm */
+  }
+}
+
+
+
